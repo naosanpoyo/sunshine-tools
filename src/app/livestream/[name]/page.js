@@ -1,6 +1,31 @@
-import './livestream.css';
+import '../livestream.css';
 
-const Page = async () => {
+const Page = async (props) => {
+
+    const twitchGameId = {
+        sms: "6086",
+        sm64: "2692",
+        sm3dw: "369590",
+        smo: "493997",
+        rfa: "514313",
+    };
+
+    const youtubeQuery = {
+        sms: "マリオサンシャイン",
+        sm64: "マリオ64",
+        sm3dw: "マリオ3Dワールド",
+        smo: "マリオオデッセイ",
+        rfa: "リングフィット",
+    }
+    
+    if (!twitchGameId[props.params.name]) {
+        return (
+            <div>
+                <h2>このゲームは対応していません。</h2>
+                <h2>管理者(なおさん)に連絡してください。</h2>
+            </div>
+        )
+    }
 
     ///// Twitch /////
 
@@ -72,7 +97,7 @@ const Page = async () => {
     }
 
     async function getStreams() {
-        const endpoint = `https://api.twitch.tv/helix/streams?game_id=${process.env.TWITCH_GAME_ID}`;
+        const endpoint = `https://api.twitch.tv/helix/streams?game_id=${twitchGameId[props.params.name]}`;
 
         let authorizationObject = await getTwitchAuthorization();
         let { access_token, expires_in, token_type } = authorizationObject;
@@ -99,7 +124,7 @@ const Page = async () => {
 
     let data = null;
     try {
-        const res = await fetch(`https://www.googleapis.com/youtube/v3/search?q=${process.env.YOUTUBE_QUERY}&part=snippet&eventType=live&type=video&maxResults=50&key=${process.env.YOUTUBE_KEY}`, { next: { revalidate: 600 } });
+        const res = await fetch(`https://www.googleapis.com/youtube/v3/search?q=${youtubeQuery[props.params.name]}&part=snippet&eventType=live&type=video&maxResults=50&key=${process.env.YOUTUBE_KEY}`, { next: { revalidate: 600 } });
         data = await res.json();
         console.log(data);
     } catch (error) {
