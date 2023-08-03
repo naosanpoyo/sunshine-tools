@@ -5,7 +5,7 @@ const Page = async (props) => {
     const twitchGameId = {
         sms: "6086",
         sm64: "2692",
-        sm3dw: "369590",
+        sm3dw: "1446426412",
         smo: "493997",
         rfa: "514313",
     };
