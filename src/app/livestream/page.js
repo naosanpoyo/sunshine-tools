@@ -80,7 +80,6 @@ const Page = async () => {
 
     ///// YouTube /////
 
-    const { key, query } = settings.youtube;
     let data = null;
     try {
         const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&eventType=live&type=video&maxResults=10&key=${process.env.YOUTUBE_KEY}&q=${process.env.YOUTUBE_QUERY}`, { next: { revalidate: 30 } });
