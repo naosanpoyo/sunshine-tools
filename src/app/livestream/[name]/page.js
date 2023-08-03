@@ -5,9 +5,11 @@ const Page = async (props) => {
     const twitchGameId = {
         sms: "6086",
         sm64: "2692",
-        sm3dw: "1446426412",
+        sm3dw: "369590&1446426412",
         smo: "493997",
         rfa: "514313",
+        botw: "110758",
+        totk: "512998",
     };
 
     const youtubeQuery = {
@@ -16,6 +18,8 @@ const Page = async (props) => {
         sm3dw: "マリオ3Dワールド",
         smo: "マリオオデッセイ",
         rfa: "リングフィット",
+        botw: "ブレスオブザワイルド",
+        totk: "ティアーズオブザキングダム",
     }
     
     if (!twitchGameId[props.params.name]) {
