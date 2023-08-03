@@ -101,7 +101,9 @@ const Page = async (props) => {
     }
 
     async function getStreams() {
-        const endpoint = `https://api.twitch.tv/helix/streams?game_id=${twitchGameId[props.params.name]}`;
+        const time = Math.floor(Date.now() / 60000);
+        console.log(`twitch: time=${time}`);
+        const endpoint = `https://api.twitch.tv/helix/streams?game_id=${twitchGameId[props.params.name]}&time=${time}`;
 
         let authorizationObject = await getTwitchAuthorization();
         let { access_token, expires_in, token_type } = authorizationObject;
@@ -127,10 +129,11 @@ const Page = async (props) => {
     ///// YouTube /////
 
     let data = null;
+    const time = Math.floor(Date.now() / 600000);
+    console.log(`youtube: time=${time}`);
     try {
-        const res = await fetch(`https://www.googleapis.com/youtube/v3/search?q=${youtubeQuery[props.params.name]}&part=snippet&eventType=live&type=video&maxResults=50&key=${process.env.YOUTUBE_KEY}`, { next: { revalidate: 600 } });
+        const res = await fetch(`https://www.googleapis.com/youtube/v3/search?q=${youtubeQuery[props.params.name]}&part=snippet&eventType=live&type=video&maxResults=50&key=${process.env.YOUTUBE_KEY}&time=${time}`, { next: { revalidate: 600 } });
         data = await res.json();
-        console.log(data);
     } catch (error) {
         console.log(error);
     }
