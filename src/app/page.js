@@ -1,95 +1,59 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import './livestream/livestream.css';
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
+    return (
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <h1>ツール一覧</h1>
+            <div className="streams">
+                <div className="stream-container">
+                    <a href="https://sunshine-tools.vercel.app/livestream/sms" target="_blank" rel="noopener noreferrer">
+                        <img src="live.png" />
+                        <h2>サンシャイン配信一覧表示</h2>
+                    </a>
+                </div>
+                <div className="stream-container">
+                    <a href="https://naosanpoyo.github.io/PeteyPattern/" target="_blank" rel="noopener noreferrer">
+                        <img src="petey.png" />
+                        <h2>ボスパックンツール</h2>
+                    </a>
+                </div>
+                <div className="stream-container">
+                    <a href="https://docs.google.com/spreadsheets/d/1lDy6K2_pqafPnrAVaKtEVbAegrypd7Z7Y-rjhux_Plc/edit#gid=0" target="_blank" rel="noopener noreferrer">
+                        <img src="pattern.png" />
+                        <h2>ボスパックンパターン一覧</h2>
+                    </a>
+                </div>
+                <div className="stream-container">
+                    <a href="https://naosanpoyo.github.io/SunshineBingo/" target="_blank" rel="noopener noreferrer">
+                        <img src="bingo.png" />
+                        <h2>初心者用ビンゴ</h2>
+                    </a>
+                </div>
+                <div className="stream-container">
+                    <a href="https://naosanpoyo.github.io/BingoSeeds/" target="_blank" rel="noopener noreferrer">
+                        <img src="seed.png" />
+                        <h2>ビンゴシード厳選</h2>
+                    </a>
+                </div>
+                <div className="stream-container">
+                    <a href="https://naosanpoyo.github.io/SalmonRunCountDown/" target="_blank" rel="noopener noreferrer">
+                        <img src="salmon.png" />
+                        <h2>サーモンランカウントダウン</h2>
+                    </a>
+                </div>
+            </div>
+            <h1>記事一覧</h1>
+            <ul>
+                <li><a href="https://naosan-rta.hatenablog.com/entry/bingorule">スーパーマリオサンシャイン本家ビンゴルール</a></li>
+                <li><a href="https://naosan-rta.hatenablog.com/entry/SunshineBingo2">第2回マリオサンシャインビンゴ大会</a></li>
+                <li><a href="https://naosan-rta.hatenablog.com/entry/photocontest">マリオサンシャインフォトコンテスト</a></li>
+                <li><a href="https://naosan-rta.hatenablog.com/entry/2022/02/27/113227">Twitchでレイドされたときに自動でお礼と宣伝をする方法</a></li>
+                <li><a href="https://naosan-rta.hatenablog.com/entry/2022/02/24/201128">Nightbotでボスパックンのデレ度チェック</a></li>
+                <li><a href="https://naosan-rta.hatenablog.com/entry/2022/01/01/142812">スーパーマリオサンシャイン新春謎解き2022</a></li>
+                <li><a href="https://naosan-rta.hatenablog.com/entry/2021/12/21/193201">スーパーマリオサンシャイン用語(日本語&英語)</a></li>
+                <li><a href="https://naosan-rta.hatenablog.com/entry/2021/06/30/231218">第12回スーパーマリオサンシャインRTA初心者大会</a></li>
+                <li><a href="https://naosan-rta.hatenablog.com/entry/bingocontest">第1回スーパーマリオサンシャイン初心者用ビンゴ大会！</a></li>
+            </ul>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    )
 }

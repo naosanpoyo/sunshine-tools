@@ -6,13 +6,14 @@
   }
   body {
     background-color: #fff;
-    padding: 2rem;
+    padding: 0rem;
   }
   h1 {
     text-align: center;
-    color: #6441a5;
+    color: #2578fc;
     font-size: 1.6rem;
     font-weight: 800;
+    padding-top: 5rem;
   }
   .streams {
     width: 100%;
@@ -50,7 +51,7 @@
   .stream-container p {
     margin-top: 0.3rem;
     font-size: 0.9rem;
-    color: #6441a5;
+    color: #2578fc;
     display: flex;
     align-items: center;
     font-weight: 600;
@@ -60,10 +61,11 @@
   }
   .multi-stream-button {
     text-align: center;
-    color: #6441a5;
+    color: #2578fc;
     font-size: 1.4rem;
     font-weight: 800;
-      border-color: #6441a5;
+    border-color: #2578fc;
+    background-color: #e3f2fd;
       border-radius: 15px;
       min-height: 10rem;
   }
@@ -85,13 +87,14 @@
       }
       body {
         background-color: #fff;
-        padding: 2rem;
+        padding: 0rem;
       }
       h1 {
         text-align: center;
-        color: #6441a5;
+        color: #2578fc;
         font-size: 1.6rem;
         font-weight: 800;
+        padding-top: 5rem;
       }
       .streams {
         width: 100%;
@@ -129,7 +132,7 @@
       .stream-container p {
         margin-top: 0.3rem;
         font-size: 0.9rem;
-        color: #6441a5;
+        color: #2578fc;
         display: flex;
         align-items: center;
         font-weight: 600;
@@ -139,10 +142,11 @@
       }
       .multi-stream-button {
         text-align: center;
-        color: #6441a5;
+        color: #2578fc;
         font-size: 1.4rem;
         font-weight: 800;
-          border-color: #6441a5;
+        border-color: #2578fc;
+        background-color: #e3f2fd;
           border-radius: 15px;
           min-height: 10rem;
       }
@@ -165,13 +169,14 @@
       }
       body {
         background-color: #fff;
-        padding: 2rem;
+        padding: 0rem;
       }
       h1 {
         text-align: center;
-        color: #6441a5;
+        color: #2578fc;
         font-size: 1.6rem;
         font-weight: 800;
+        padding-top: 5rem;
       }
       .streams {
         width: 100%;
@@ -209,7 +214,7 @@
       .stream-container p {
         margin-top: 0.3rem;
         font-size: 0.9rem;
-        color: #6441a5;
+        color: #2578fc;
         display: flex;
         align-items: center;
         font-weight: 600;
@@ -219,10 +224,11 @@
       }
       .multi-stream-button {
         text-align: center;
-        color: #6441a5;
+        color: #2578fc;
         font-size: 1.4rem;
         font-weight: 800;
-          border-color: #6441a5;
+        border-color: #2578fc;
+        background-color: #e3f2fd;
           border-radius: 15px;
           min-height: 10rem;
       }
